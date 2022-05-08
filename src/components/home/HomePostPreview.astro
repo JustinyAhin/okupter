@@ -2,7 +2,7 @@
 const { slug, title, description, date, readingTime } = Astro.props;
 ---
 
-<div class="p-8 space-y-2 bg-white rounded-sm shadow-sm">
+<article class="p-8 space-y-2 bg-white rounded-sm shadow-sm">
   <h3>
     <a href={`archives/${slug}`} class="no-underline">{title}</a>
   </h3>
@@ -12,7 +12,7 @@ const { slug, title, description, date, readingTime } = Astro.props;
     <span>-</span>
     <p>&nbsp{readingTime} min</p>
   </div>
-</div>
+</article>
 
 <style>
   a {

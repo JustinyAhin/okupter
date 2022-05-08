@@ -44,7 +44,7 @@ const seoMetatags = post.seoMetatags
   ogImage={seoMetatags.image.url}
   description={seoMetatags.description}
 >
-  <div class="space-y-12">
+  <article class="space-y-12">
     <h1>{post.title}</h1>
     <Image
       src={seoMetatags.image.url}
@@ -53,8 +53,8 @@ const seoMetatags = post.seoMetatags
       height="400"
       notLazy
     />
-    <div class="space-y-6">
+    <div class="space-y-6 post-content">
       <StructuredText value={post.content} />
     </div>
-  </div>
+  </article>
 </Base>
