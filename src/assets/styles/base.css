@@ -18,6 +18,22 @@
   a {
     @apply font-bold underline hover:text-primary;
   }
+
+  pre {
+    @apply p-8 bg-gray-900 rounded-lg text-white overflow-x-auto;
+  }
+
+  blockquote {
+    @apply border-l-4 border-l-gray-900 pl-4 space-y-2;
+  }
+
+  blockquote p {
+    @apply text-2xl sm:text-3xl;
+  }
+
+  blockquote footer {
+    @apply font-bold;
+  }
 }
 
 @layer components {
