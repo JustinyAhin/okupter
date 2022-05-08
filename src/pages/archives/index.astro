@@ -1,0 +1,63 @@
+---
+// Internal
+import getDataFromDato from "../../assets/scripts/client";
+import { blogIndexQuery } from "../../assets/scripts/queries";
+
+// Utils
+import { readableDate } from "../../assets/scripts/utils";
+
+// Components import
+import Base from "../../layouts/Base.astro";
+
+// Data
+const title = "Archives";
+const { allPosts } = await getDataFromDato(blogIndexQuery);
+
+let uniqueYears = [...new Set(allPosts.map((post) => post._firstPublishedAt.split("-")[0]))];
+
+let postCount = uniqueYears.map((year) => {
+  let count = 0;
+  allPosts.forEach((post) => {
+    if (post._firstPublishedAt.split("-")[0] === year) {
+      count++;
+    }
+  });
+  return { year, count };
+});
+---
+
+<Base {title}>
+<div class="space-y-12">
+  <h1>Archives</h1>
+  <div class="space-y-8">
+    {
+      uniqueYears.map((year) => {
+        return (
+          <div class="flex sm:space-x-12 space-y-4 sm:space-y-0 flex-col sm:flex-row">
+            <div class="flex space-x-2">
+              <h2>{year}</h2>
+              <span class="text-base text-gray-500 font-bold">{postCount.find((post) => post.year === year).count}</span>
+            </div>
+            <div class="space-y-4">
+              {
+                allPosts.filter(post => post._firstPublishedAt.split("-")[0] === year).map(post => {
+                  return (
+                    <div>
+                      <h3 class="font-medium">{post.title}</h3>
+                        <div class="flex text-sm text-gray-500">
+                          <span>{readableDate(post._firstPublishedAt)}</span>
+                          <span>&nbsp-&nbsp</span>
+                          <span>4 min</span>
+                        </div>
+                    </div>
+                  )
+                })
+              }
+            </div>
+          </div>
+        )
+      })
+    }
+  </div>
+</div>
+</Base>

@@ -14,4 +14,15 @@ query SiteMeta {
   }
 }`;
 
-export { siteMetaQuery };
+const blogIndexQuery = `
+query blogIndexQuery {
+  allPosts(orderBy: _firstPublishedAt_DESC) {
+    id
+    __typename
+    title
+    slug
+    _firstPublishedAt
+  }
+}`;
+
+export { blogIndexQuery, siteMetaQuery };
