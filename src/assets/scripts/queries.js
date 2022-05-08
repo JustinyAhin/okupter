@@ -4,6 +4,7 @@ query SiteMeta {
       id
       __typename
       name
+      description
       publicUrl
       slogan
       ogImage {

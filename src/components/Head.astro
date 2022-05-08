@@ -10,6 +10,7 @@ import "../assets/styles/base.css";
 const { settingsPage } = await getDataFromDato(siteMetaQuery);
 const siteMeta = {
   name: settingsPage.name,
+  description: settingsPage.description,
   slogan: settingsPage.slogan,
   publicUrl: settingsPage.publicUrl,
   ogImage: settingsPage.ogImage.url,
@@ -29,13 +30,16 @@ const { title, description, isHomePage, ogImage } = Astro.props;
     siteMeta.name}</title
 >
 <meta name="title" content={title || siteMeta.name} />
-<meta name="description" content={description || siteMeta.slogan} />
+<meta name="description" content={(isHomePage && siteMeta.description) || siteMeta.slogan} />
 
 <!-- Sitemap -->
 <link rel="sitemap" href="/sitemap.xml" />
 
 <!-- Canonical -->
 <link rel="canonical" href={Astro.canonicalURL} />
+
+<!-- Robot -->
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
