@@ -1,5 +1,5 @@
 ---
-const { slug, title, description, date, readingTime } = Astro.props;
+const { slug, title, description, date } = Astro.props;
 ---
 
 <article class="p-8 space-y-2 bg-white rounded-sm shadow-sm">
@@ -8,9 +8,7 @@ const { slug, title, description, date, readingTime } = Astro.props;
   </h3>
   <p>{description}</p>
   <div class="flex text-sm">
-    <p>{date}&nbsp</p>
-    <span>-</span>
-    <p>&nbsp{readingTime} min</p>
+    <p>{date}</p>
   </div>
 </article>
 

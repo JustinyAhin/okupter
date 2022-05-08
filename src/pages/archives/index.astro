@@ -46,10 +46,8 @@ let postCount = uniqueYears.map((year) => {
                       <h3 class="font-medium">
                         <a href={`archives/${post.slug}`} class="no-underline">{post.title}</a>
                       </h3>
-                        <div class="flex text-sm text-gray-500">
+                        <div class="text-sm text-gray-500">
                           <span>{readableDate(post._firstPublishedAt)}</span>
-                          <span>&nbsp-&nbsp</span>
-                          <span>4 min</span>
                         </div>
                     </div>
                   )
