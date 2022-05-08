@@ -2,8 +2,10 @@
 const { title, description, date, readingTime } = Astro.props;
 ---
 
-<div class="p-12 space-y-2 bg-white rounded-sm shadow-md">
-  <h3>{title}</h3>
+<div class="p-8 space-y-2 bg-white rounded-sm shadow-md">
+  <h3>
+    <a href="/">{title}</a>
+  </h3>
   <p>{description}</p>
   <div class="flex text-sm">
     <p>{date}&nbsp</p>
@@ -11,3 +13,9 @@ const { title, description, date, readingTime } = Astro.props;
     <p>&nbsp{readingTime}</p>
   </div>
 </div>
+
+<style>
+  a {
+    @apply no-underline;
+  }
+</style>
