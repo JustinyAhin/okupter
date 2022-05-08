@@ -1,8 +1,7 @@
 ---
 // Component Imports
 import Base from "../layouts/Base.astro";
-import HomeIcons from "../components/HomeIcons.astro";
-import HomePostPreview from "../components/HomePostPreview.astro";
+import HomeIcons from "../components/home/HomeIcons.astro";
 ---
 
 <Base isHomePage>
@@ -25,18 +24,7 @@ import HomePostPreview from "../components/HomePostPreview.astro";
     <div class="space-y-4">
       <h2>Selected blog posts</h2>
       <div class="space-y-8">
-        <HomePostPreview
-          title={"This is the second post title"}
-          description={"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, minus."}
-          date={"May 3, 22"}
-          readingTime={"11 min"}
-        />
-        <HomePostPreview
-          title={"This is the first post title"}
-          description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et dapibus mi, nec lacinia mauris. Curabitur tempor, ligula pharetra feugiat finibus, ligula felis commodo leo, ut tristique velit lorem vitae velit. Fusce ac sagittis diam. Donec porttitor et eros ac ultricies."}
-          date={"January 20, 22"}
-          readingTime={"5 min"}
-        />
+
       </div>
     </div>
   </div>
