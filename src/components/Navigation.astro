@@ -3,17 +3,32 @@
   <nav>
     <ul class="flex space-x-2">
       <li>
-        <a href="/">About</a>
+        <a href="/about">About</a>
       </li>
       <li>
-        <a href="/">Archives</a>
+        <a href="/archives">Archives</a>
       </li>
     </ul>
   </nav>
 </header>
 
+<script>
+  const menuLinks = document.querySelectorAll("nav a");
+  const currentUrl = window.location.href;
+
+  menuLinks.forEach((link) => {
+    if (link.href === currentUrl) {
+      link.classList.add("active");
+    }
+  });
+</script>
+
 <style>
   a {
-    @apply active:font-bold active:text-primary no-underline;
+    @apply no-underline;
+  }
+
+  a.active {
+    @apply text-primary;
   }
 </style>
