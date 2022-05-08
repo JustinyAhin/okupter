@@ -45,4 +45,9 @@
   .okpt-sm-container {
     @apply max-w-4xl px-8 md:px-16 mx-auto;
   }
+
+  /* Post */
+  article img {
+    @apply shadow-md rounded-md;
+  }
 }
