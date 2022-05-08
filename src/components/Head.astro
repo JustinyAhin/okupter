@@ -1,0 +1,52 @@
+---
+// Internal
+import getDataFromDato from "../assets/scripts/client";
+import { siteMetaQuery } from "../assets/scripts/queries";
+
+// Styles import
+import "../assets/styles/base.css";
+
+// Data
+const { settingsPage } = await getDataFromDato(siteMetaQuery);
+const siteMeta = {
+  name: settingsPage.name,
+  slogan: settingsPage.slogan,
+  publicUrl: settingsPage.publicUrl,
+  ogImage: settingsPage.ogImage.url,
+};
+
+const { title, description, isHomePage, ogImage } = Astro.props;
+---
+
+<!-- Global Metadata -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+<!-- Primary Meta Tags -->
+<title
+  >{title || siteMeta.name} - {(isHomePage && siteMeta.slogan) ||
+    siteMeta.name}</title
+>
+<meta name="title" content={title || siteMeta.name} />
+<meta name="description" content={description || siteMeta.slogan} />
+
+<!-- Sitemap -->
+<link rel="sitemap" href="/sitemap.xml" />
+
+<!-- Canonical -->
+<link rel="canonical" href={Astro.canonicalURL} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={Astro.canonicalURL} />
+<meta property="og:title" content={title || siteMeta.name} />
+<meta property="og:description" content={description || siteMeta.slogan} />
+<meta property="og:image" content={ogImage || siteMeta.ogImage} />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={Astro.canonicalURL} />
+<meta property="twitter:title" content={title || siteMeta.name} />
+<meta property="twitter:description" content={description || siteMeta.slogan} />
+<meta property="twitter:image" content={ogImage || siteMeta.ogImage} />

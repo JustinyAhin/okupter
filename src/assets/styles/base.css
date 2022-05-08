@@ -1,0 +1,109 @@
+.snipcart-button-primary {
+  @apply !bg-secondary;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-5xl md:text-6xl font-bold;
+  }
+
+  h2 {
+    @apply text-4xl md:text-5xl font-bold;
+  }
+
+  h3 {
+    @apply text-3xl md:text-4xl font-bold;
+  }
+
+  h4 {
+    @apply text-2xl md:text-3xl font-bold;
+  }
+
+  h5 {
+    @apply text-xl md:text-2xl font-bold;
+  }
+}
+
+@layer components {
+  .big-link-default {
+    @apply font-bold bg-secondary text-white px-4 py-2 rounded-md flex justify-center;
+  }
+
+  /* Containers */
+
+  .nj-md-container {
+    @apply px-8 md:px-16 max-w-screen-xl mx-auto;
+  }
+
+  .nj-sm-container {
+    @apply max-w-4xl px-8 md:px-16 mx-auto;
+  }
+
+  /* Post content */
+
+  .post-content {
+    @apply space-y-8;
+  }
+
+  .post-content figure {
+    @apply lg:-mx-24 !my-16;
+  }
+
+  .post-content img {
+    @apply m-auto shadow-xl rounded-md;
+  }
+
+  .post-content a {
+    @apply underline;
+  }
+
+  .post-content a:hover {
+    @apply text-secondary;
+  }
+
+  .post-content ul {
+    @apply list-[auto] pl-12 space-y-2;
+  }
+
+  .post-content blockquote {
+    @apply p-4 italic border-l-4 border-secondary;
+  }
+
+  .post-content blockquote p:first-child {
+    @apply mb-2;
+  }
+
+  /* Block - Click to tweet */
+  .block__ctt {
+    @apply space-y-8 p-16 border-solid border-[1px] border-gray-400;
+  }
+
+  .block__ctt a {
+    @apply no-underline text-2xl sm:text-4xl font-thin;
+  }
+
+  .block__ctt__prompt {
+    @apply flex space-x-2 items-center w-fit ml-auto;
+  }
+
+  .block__ctt__prompt p {
+    @apply font-light text-sm uppercase;
+  }
+
+  .block__ctt__prompt img {
+    @apply shadow-none rounded-none h-4 w-4;
+  }
+
+  /* Block - CTA */
+  .block__cta {
+    @apply bg-gray-900 p-8 text-center w-8/12 mx-auto;
+  }
+
+  .block__cta a {
+    @apply no-underline text-white font-bold hover:text-white hover:underline;
+  }
+}
