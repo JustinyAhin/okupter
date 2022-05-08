@@ -33,10 +33,10 @@ let postCount = uniqueYears.map((year) => {
     {
       uniqueYears.map((year) => {
         return (
-          <div class="flex sm:space-x-12 space-y-4 sm:space-y-0 flex-col sm:flex-row">
+          <div class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-12">
             <div class="flex space-x-2">
               <h2>{year}</h2>
-              <span class="text-base text-gray-500 font-bold">{postCount.find((post) => post.year === year).count}</span>
+              <span class="text-base font-bold text-gray-500">{postCount.find((post) => post.year === year).count}</span>
             </div>
             <div class="space-y-4">
               {
