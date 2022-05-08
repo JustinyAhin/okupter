@@ -27,7 +27,7 @@ query blogIndexQuery {
 
 const homeIndexQuery = `
 query homeIndexQuery {
-  allPosts(orderBy: _firstPublishedAt_DESC, first: "1") {
+  allPosts(orderBy: _firstPublishedAt_DESC, first: "3") {
     id
     __typename
     title
