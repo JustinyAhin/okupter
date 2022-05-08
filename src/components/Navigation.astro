@@ -3,7 +3,7 @@
   <nav>
     <ul class="flex space-x-4">
       <li>
-        <a href="/">About</a>
+        <a href="#">About</a>
       </li>
       <li>
         <a href="/archives">Archives</a>
@@ -12,7 +12,7 @@
   </nav>
 </header>
 
-<script>
+<script client:load>
   const menuLinks = document.querySelectorAll("nav a");
   const currentUrl = window.location.href;
 
