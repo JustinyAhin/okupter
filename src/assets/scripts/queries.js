@@ -25,6 +25,21 @@ query blogIndexQuery {
   }
 }`;
 
+const homeIndexQuery = `
+query homeIndexQuery {
+  allPosts(orderBy: _firstPublishedAt_DESC, first: "1") {
+    id
+    __typename
+    title
+    slug
+    _firstPublishedAt
+    seoMetatags {
+      __typename
+      description
+    }
+  }
+}`;
+
 const blogIndexSlugsQuery = `
 query blogIndexSlugsQuery {
   allPosts {
@@ -60,4 +75,10 @@ query singlePostQuery($slug: String!) {
   }
 }`;
 
-export { blogIndexQuery, blogIndexSlugsQuery, singlePostQuery, siteMetaQuery };
+export {
+  blogIndexQuery,
+  blogIndexSlugsQuery,
+  homeIndexQuery,
+  singlePostQuery,
+  siteMetaQuery,
+};
