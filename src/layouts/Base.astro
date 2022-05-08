@@ -13,9 +13,11 @@ const { title, description, isHomePage, ogImage } = Astro.props;
     <Head {title} {description} {isHomePage} {ogImage} />
   </head>
 
-  <body>
+  <body class="text-secondary bg-neutral-100 text-lg okpt-sm-container">
     <Navigation />
-    <slot />
+    <main>
+      <slot />
+    </main>
     <Footer />
   </body>
 </html>

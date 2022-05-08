@@ -1,0 +1,13 @@
+---
+const { title, description, date, readingTime } = Astro.props;
+---
+
+<div class="space-y-2 bg-white p-12 rounded-sm shadow-md">
+  <h3>{title}</h3>
+  <p>{description}</p>
+  <div class="flex text-sm">
+    <p>{date}&nbsp</p>
+    <span>-</span>
+    <p>&nbsp{readingTime}</p>
+  </div>
+</div>

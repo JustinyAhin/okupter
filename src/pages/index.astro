@@ -1,8 +1,39 @@
 ---
 // Component Imports
+import HomePostPreview from "../components/HomePostPreview.astro";
 import Base from "../layouts/Base.astro";
 ---
 
 <Base isHomePage>
-  <h1>Hello from Okupter</h1>
+  <div class="space-y-12">
+    <div class="space-y-4">
+      <h1>Okupter</h1>
+      <p>Welcome to <span class="font-bold">Okupter</span>.</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
+        facilis vitae tenetur provident possimus consequatur cupiditate nisi
+        nemo molestias doloremque dolores, id, excepturi sint, obcaecati eaque
+        ea dolor reiciendis ut. Asperiores iusto eos voluptates reiciendis ex,
+        ad iure excepturi sunt.
+      </p>
+    </div>
+
+    <div class="space-y-4">
+      <h2>Selected blog posts</h2>
+      <div class="space-y-8">
+        <HomePostPreview
+          title={"This is the second post title"}
+          description={"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, minus."}
+          date={"May 3, 22"}
+          readingTime={"11 min"}
+        />
+        <HomePostPreview
+          title={"This is the first post title"}
+          description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et dapibus mi, nec lacinia mauris. Curabitur tempor, ligula pharetra feugiat finibus, ligula felis commodo leo, ut tristique velit lorem vitae velit. Fusce ac sagittis diam. Donec porttitor et eros ac ultricies."}
+          date={"January 20, 22"}
+          readingTime={"5 min"}
+        />
+      </div>
+    </div>
+  </div>
 </Base>
