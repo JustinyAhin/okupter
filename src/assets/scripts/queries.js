@@ -22,6 +22,10 @@ query blogIndexQuery {
     title
     slug
     _firstPublishedAt
+    seoMetatags {
+      __typename
+      description
+    }
   }
 }`;
 

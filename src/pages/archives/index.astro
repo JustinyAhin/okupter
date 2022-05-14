@@ -42,10 +42,11 @@ let postCount = uniqueYears.map((year) => {
               {
                 allPosts.filter(post => post._firstPublishedAt.split("-")[0] === year).map(post => {
                   return (
-                    <div>
+                    <div class="space-y-2">
                       <h3 class="font-medium">
                         <a href={`archives/${post.slug}`} class="no-underline">{post.title}</a>
                       </h3>
+                      <p class="text-gray-700 text-base">{post.seoMetatags.description}</p>
                       <div class="text-sm text-gray-500">
                         <span>{readableDate(post._firstPublishedAt)}</span>
                       </div>

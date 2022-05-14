@@ -34,7 +34,7 @@ allPosts = allPosts.map((post) => {
     {
         allPosts.map((post) => {
             return (
-                <HomePostPreview slug={post.slug} title={post.title} date={post._firstPublishedAt}/>
+                <HomePostPreview slug={post.slug} title={post.title} description={post.seoMetatags.description} date={post._firstPublishedAt}/>
             )
         })
     }
