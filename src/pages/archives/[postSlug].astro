@@ -27,16 +27,16 @@ const { post } = await getDataFromDato(singlePostQuery, postSlug);
 
 const title = post.title;
 
-const seoMetatags = post.seoMetatags
-  ? post.seoMetatags
-  : {
-      title: title,
-      description: post.title,
-      image: {
-        url: "https://www.datocms-assets.com/66491/1651977048-okupter-og-image.png",
-        alt: "Okupter default OG image",
-      },
-    };
+const defaultImage = {
+  url: "https://www.datocms-assets.com/66491/1651977048-okupter-og-image.png",
+  alt: "Okupter default OG image",
+};
+
+const seoMetatags = {
+  title: post.seoMetatags.title || title,
+  description: post.seoMetatags.description || title,
+  image: post.seoMetatags.image || defaultImage,
+};
 ---
 
 <Base
