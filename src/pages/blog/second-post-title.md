@@ -17,7 +17,7 @@ Maecenas sit amet maximus sapien. Fusce vitae pellentesque tortor. Nulla mi odio
 
 ## Etiam tincidunt venenatis erat
 
-```JavaScript
+```javascript
 // Convert date to readble format
 const readableDate = (date) => {
   const options = { year: "numeric", month: "long", day: "numeric" };
