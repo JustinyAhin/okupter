@@ -4,7 +4,7 @@ import Base from "../../layouts/Base.astro";
 import PostCard from "../../components/PostCard.astro";
 
 // Data
-const posts = await Astro.glob('./**/*.md');
+const posts = await Astro.glob('./*.md');
 ---
 
 <Base title="Blog">
@@ -18,7 +18,7 @@ const posts = await Astro.glob('./**/*.md');
             title={post.frontmatter.title}
             datePublished={post.frontmatter.datePublished}
             abstract={post.frontmatter.abstract}
-            slug={post.url.replace(/^\/blog\//, '')}
+            slug={post.url}
           />
         ))
       }
