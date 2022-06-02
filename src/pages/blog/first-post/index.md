@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/SinglePost.astro"
+layout: "../../../layouts/SinglePost.astro"
 title: Hello, World
 abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod,
   nisl eget consectetur congue, nisl nunc aliquet nunc, euismod aliquam nisl nunc
