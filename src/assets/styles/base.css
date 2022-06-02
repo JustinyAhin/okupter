@@ -32,7 +32,7 @@
   }
 
   a {
-    @apply underline hover:text-primary;
+    @apply underline hover:text-indigo-900 hover:font-bold;
   }
 }
 
