@@ -13,9 +13,9 @@ const { title, description, isHomePage, ogImage } = Astro.props;
     <Head {title} {description} {isHomePage} {ogImage} />
   </head>
 
-  <body class="font-inter">
+  <body class="font-inter bg-secondary-100 text-gray-800 selection:bg-primary-200">
     <Navigation />
-    <main class="py-32 min-h-screen">
+    <main>
       <slot></slot>
     </main>
     <Footer />

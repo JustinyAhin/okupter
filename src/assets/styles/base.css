@@ -4,41 +4,55 @@
 
 @layer base {
   h1 {
-    @apply text-[3.4rem] leading-[1.25em];
+    @apply text-[3.4rem] mb-6 leading-[1.25em];
   }
 
   h2 {
-    @apply text-[2.75rem] leading-[1.25em];
+    @apply text-[2.75rem] mb-5 leading-[1.25em];
   }
 
   h3 {
-    @apply text-[2.25rem] leading-[1.4em];
+    @apply text-[2.25rem] mb-4 leading-[1.4em];
   }
 
   h4 {
-    @apply text-[1.375rem] leading-[1.4em];
+    @apply text-[1.375rem] mb-3 leading-[1.4em];
   }
 
   h5 {
-    @apply text-[0.875rem] leading-[1.5em] font-medium uppercase tracking-[1px];
+    @apply text-[0.875rem] mb-3 leading-[1.5em] font-medium uppercase tracking-[1px];
   }
 
   h6 {
-    @apply text-[0.81rem] leading-[1.5em] font-medium uppercase;
+    @apply text-[0.81rem] mb-2 leading-[1.5em] font-medium uppercase;
   }
 
   p {
-    @apply text-[1.125rem];
+    @apply text-[1.125rem] mb-4 leading-[1.5em];
+  }
+
+  a {
+    @apply underline hover:text-primary;
   }
 }
 
 @layer components {
+  /* Fonts */
+  .font-serif {
+    @apply font-baskerville;
+  }
+
+  /* Paragraphs */
+  p.extra-large {
+    @apply text-[1.5rem] mb-6;
+  }
+  
   /* Containers */
-  .okpt-md-container {
+  .xl-container {
     @apply px-8 md:px-16 max-w-screen-xl mx-auto;
   }
 
-  .okpt-sm-container {
+  .sm-container {
     @apply max-w-4xl px-8 md:px-16 mx-auto;
   }
 

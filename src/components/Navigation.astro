@@ -1,34 +1,17 @@
-<header class="">
-  <a href="/" class="text-xl">Okupter</a>
-  <nav>
-    <ul class="flex space-x-4">
-      <li>
-        <a href="#">About</a>
-      </li>
-      <li>
-        <a href="/archives">Archives</a>
-      </li>
-    </ul>
+<header class="xl-container flex justify-between py-8">
+  <div>
+    <a href="/" class="text-gray-900 text-[1.75rem] no-underline">Okupter</a>
+  </div>
+  <nav class="space-x-4">
+    <a href="/">About</a>
+    <a href="/">Archives</a>
+    <a href="/">Contact</a>
+    <a href="/styles">Styles</a>
   </nav>
 </header>
 
-<script client:load>
-  const menuLinks = document.querySelectorAll("nav a");
-  const currentUrl = window.location.href;
-
-  menuLinks.forEach((link) => {
-    if (link.href === currentUrl) {
-      link.classList.add("active");
-    }
-  });
-</script>
-
 <style>
-  a {
-    @apply no-underline;
-  }
-
-  a.active {
-    @apply text-primary;
+  nav a {
+    @apply text-base text-gray-700 no-underline;
   }
 </style>
