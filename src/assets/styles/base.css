@@ -4,35 +4,31 @@
 
 @layer base {
   h1 {
-    @apply text-4xl font-bold;
+    @apply text-[3.4rem] leading-[1.25em];
   }
 
   h2 {
-    @apply text-3xl font-bold;
+    @apply text-[2.75rem] leading-[1.25em];
   }
 
   h3 {
-    @apply text-2xl font-bold;
+    @apply text-[2.25rem] leading-[1.4em];
   }
 
-  a {
-    @apply font-bold underline hover:text-primary;
+  h4 {
+    @apply text-[1.375rem] leading-[1.4em];
   }
 
-  pre {
-    @apply p-8 bg-gray-900 rounded-lg text-white overflow-x-auto;
+  h5 {
+    @apply text-[0.875rem] leading-[1.5em] font-medium uppercase tracking-[1px];
   }
 
-  blockquote {
-    @apply border-l-4 border-l-gray-900 pl-4 space-y-2;
+  h6 {
+    @apply text-[0.81rem] leading-[1.5em] font-medium uppercase;
   }
 
-  blockquote p {
-    @apply text-2xl sm:text-3xl;
-  }
-
-  blockquote footer {
-    @apply font-bold;
+  p {
+    @apply text-[1.125rem];
   }
 }
 
