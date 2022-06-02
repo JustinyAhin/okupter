@@ -17,7 +17,7 @@ use_front_matter_path:
 file_template: ":filename:"
 build:
   preview_output_directory: "./dist"
-  install_dependencies_command: npm run dev
+  install_dependencies_command: npm install
   preview_docker_image: forestryio/node:12
   mount_path: "/srv"
   working_dir: "/srv"
