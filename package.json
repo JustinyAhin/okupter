@@ -7,6 +7,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "preview-forestry": "astro build && astro preview",
     "format:astro": "npx prettier -w .",
     "format:tailwind": "rustywind --write ."
   },
