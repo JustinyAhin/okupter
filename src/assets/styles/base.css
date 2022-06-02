@@ -46,6 +46,10 @@
   p.extra-large {
     @apply text-[1.5rem] mb-6;
   }
+
+  p.small {
+    @apply text-[0.875rem] mb-4 leading-[1.4em] text-gray-700;
+  }
   
   /* Containers */
   .xl-container {
