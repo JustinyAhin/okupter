@@ -23,5 +23,3 @@ fields:
   label: Publication date
   config:
     required: false
-pages:
-- src/pages/blog/second-post-title.app

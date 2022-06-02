@@ -4,7 +4,7 @@ title: Second post title
 abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod,
   nisl eget consectetur congue, nisl nunc aliquet nunc, euismod aliquam nisl nunc
   euismod nisl.
-datePublished: 2022-05-31T22:00:00Z
+datePublished: 2022-05-31T22:00:00.000+00:00
 
 ---
 ## This is the first post
@@ -13,7 +13,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique dolor sit
 
 Maecenas sit amet maximus sapien. Fusce vitae pellentesque tortor. Nulla mi odio, sollicitudin eget nibh nec, hendrerit mollis diam. Pellentesque efficitur enim ut tristique convallis.
 
-> Duis in odio volutpat mauris luctus lobortis. Maecenas porta, nisi at consequat porta, sapien leo molestie sapien, a luctus tellus mauris ac metus.    
+> Duis in odio volutpat mauris luctus lobortis. Maecenas porta, nisi at consequat porta, sapien leo molestie sapien, a luctus tellus mauris ac metus.
 
 ## Etiam tincidunt venenatis erat
 
@@ -29,6 +29,12 @@ Etiam tincidunt venenatis erat, in convallis lectus cursus eu. Donec scelerisque
 
 ### Ut eu tristique augue
 
-Ut eu tristique augue, id ultrices enim. Proin pharetra orci eu dui rutrum dapibus sed ac lorem. Ut interdum, arcu sit amet egestas dignissim, metus felis ultricies urna, eget pulvinar augue nulla non nisi. Pellentesque ultricies viverra pulvinar. 
+    // Convert date to readble format
+    const readableDate = (date) => {
+      const options = { year: "numeric", month: "long", day: "numeric" };
+      return new Date(date).toLocaleDateString(undefined, options);
+    };
+
+Ut eu tristique augue, id ultrices enim. Proin pharetra orci eu dui rutrum dapibus sed ac lorem. Ut interdum, arcu sit amet egestas dignissim, metus felis ultricies urna, eget pulvinar augue nulla non nisi. Pellentesque ultricies viverra pulvinar.
 
 Fusce at laoreet est. Cras dapibus sem mi, quis finibus mauris pellentesque non. Quisque pharetra felis nec nunc efficitur venenatis.
