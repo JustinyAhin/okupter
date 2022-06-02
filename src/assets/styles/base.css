@@ -51,6 +51,11 @@
     @apply text-[0.875rem] mb-4 leading-[1.4em] text-gray-700;
   }
 
+  /* Code */
+  pre {
+    @apply p-8 mb-8;
+  }
+
   /* Containers */
   .xl-container {
     @apply px-8 md:px-16 max-w-screen-xl mx-auto;
