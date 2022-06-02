@@ -11,7 +11,7 @@ sections:
   match: "**/*.md"
   new_doc_ext: app
 upload_dir: public/uploads
-public_path: public/uploads
+public_path: "/public/uploads"
 front_matter_path: ''
 use_front_matter_path: 
 file_template: ":filename:"
