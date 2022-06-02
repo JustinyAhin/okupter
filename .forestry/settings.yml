@@ -10,8 +10,8 @@ sections:
   create: documents
   match: "**/*.md"
   new_doc_ext: app
-upload_dir: okupter/medias
-public_path: "/okupter/medias"
+upload_dir: ''
+public_path: ''
 front_matter_path: ''
 use_front_matter_path: 
 file_template: ":filename:"
