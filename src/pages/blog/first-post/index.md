@@ -4,7 +4,7 @@ title: Hello, World
 abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod,
   nisl eget consectetur congue, nisl nunc aliquet nunc, euismod aliquam nisl nunc
   euismod nisl.
-datePublished: 2022-06-05
+datePublished: 2022-06-01T05:00:00Z
 
 ---
 ## This is a blog post.
