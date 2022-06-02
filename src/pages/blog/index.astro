@@ -1,0 +1,31 @@
+---
+// Component Imports
+import Base from "../../layouts/Base.astro";
+import PostCard from "../../components/PostCard.astro";
+
+// Data
+const posts = await Astro.glob('./**/*.md');
+
+posts.map(post => {
+  console.log(post);
+});
+---
+
+<Base title="Blog">
+  <div class="xl-container py-24">
+    <h1>📚 Blog</h1>
+
+    <div class="grid grid-cols-3 gap-6">
+      {
+        posts.map(post => (
+          <PostCard
+            title={post.frontmatter.title}
+            datePublished={post.frontmatter.datePublished}
+            abstract={post.frontmatter.abstract}
+            slug={post.url.replace(/^\/blog\//, '')}
+          />
+        ))
+      }
+    </div>
+  </div>
+</Base>

@@ -1,18 +1,13 @@
 ---
-// Internal
-import getDataFromDato from "../assets/scripts/client";
-import { siteMetaQuery } from "../assets/scripts/queries";
-
 // Styles import
 import "../assets/styles/base.css";
 
 // Data
-const { settingsPage } = await getDataFromDato(siteMetaQuery);
 const siteMeta = {
-  name: settingsPage.name,
-  slogan: settingsPage.slogan,
-  publicUrl: settingsPage.publicUrl,
-  ogImage: settingsPage.ogImage.url,
+  name: "Okupter",
+  slogan: "On web, performance and accessibility.",
+  publicUrl: "https://okupter.vercel.app/",
+  ogImage: "https://res.cloudinary.com/segbedji/image/upload/v1654149038/okupter/okupter-og-image_xxyy1n.png",
 };
 
 const { title, description, isHomePage, ogImage } = Astro.props;
