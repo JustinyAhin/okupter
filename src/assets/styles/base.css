@@ -4,7 +4,7 @@
 
 @layer base {
   h1 {
-    @apply text-[3.4rem] mb-6 leading-[1.25em];
+    @apply text-[2rem] sm:text-[3.4rem] mb-6 leading-[1.25em];
   }
 
   h2 {
@@ -44,7 +44,7 @@
 
   /* Paragraphs */
   p.extra-large {
-    @apply text-[1.5rem] mb-6;
+    @apply sm:text-[1.5rem] mb-6;
   }
 
   p.small {
