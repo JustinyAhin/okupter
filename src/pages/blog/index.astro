@@ -5,10 +5,6 @@ import PostCard from "../../components/PostCard.astro";
 
 // Data
 const posts = await Astro.glob('./**/*.md');
-
-posts.map(post => {
-  console.log(post);
-});
 ---
 
 <Base title="Blog">

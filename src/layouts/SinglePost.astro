@@ -7,8 +7,8 @@ const { content } = Astro.props;
 ---
 
 <Base title={content.title}>
-    <div class="xl-container py-24">
+    <article class="xl-container py-24">
         <h1>{content.title}</h1>
         <slot />
-    </div>
+    </article>
 </Base>
