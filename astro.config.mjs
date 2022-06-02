@@ -5,7 +5,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://okupter.vercel.app",
+  site: "https://okupter.netlify.app",
   integrations: [
     tailwind({
       config: {
