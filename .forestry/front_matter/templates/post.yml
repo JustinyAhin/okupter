@@ -4,13 +4,21 @@ hide_body: false
 fields:
 - type: text
   name: layout
-  label: layout
+  label: Layout
+  hidden: true
+  default: "../../../layouts/SinglePost.astro"
 - type: text
   name: title
-  label: title
+  label: Title
+  config:
+    required: true
 - type: textarea
   name: abstract
-  label: abstract
+  label: Abstract
+  config:
+    wysiwyg: false
 - type: datetime
   name: datePublished
-  label: datePublished
+  label: Publication date
+  config:
+    required: false
