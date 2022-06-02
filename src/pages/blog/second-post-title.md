@@ -17,6 +17,14 @@ Maecenas sit amet maximus sapien. Fusce vitae pellentesque tortor. Nulla mi odio
 
 ## Etiam tincidunt venenatis erat
 
+```JavaScript
+// Convert date to readble format
+const readableDate = (date) => {
+  const options = { year: "numeric", month: "long", day: "numeric" };
+  return new Date(date).toLocaleDateString(undefined, options);
+};
+```
+
 Etiam tincidunt venenatis erat, in convallis lectus cursus eu. Donec scelerisque augue justo, ut finibus enim pulvinar in. Ut bibendum, diam id gravida sagittis, arcu tortor euismod neque, non lacinia ante nunc id nulla.
 
 ### Ut eu tristique augue
