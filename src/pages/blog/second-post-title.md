@@ -29,38 +29,6 @@ Etiam tincidunt venenatis erat, in convallis lectus cursus eu. Donec scelerisque
 
 ### Ut eu tristique augue
 
-\`\`\`php
-
-// The filter callback function.
-
-function example_callback( $string, $arg1, $arg2 ) {
-
-    // (maybe) modify $string.
-
-    return $string;
-
-}
-
-add_filter( 'example_filter', 'example_callback', 10, 3 );
-
-/*
-
- * Apply the filters by calling the 'example_callback()' function
-
- * that's hooked onto \`example_filter\` above.
-
- *
-
- * - 'example_filter' is the filter hook.
-
- * - 'filter me' is the value being filtered.
-
- * - $arg1 and $arg2 are the additional arguments passed to the callback.
-
-$value = apply_filters( 'example_filter', 'filter me', $arg1, $arg2 );
-
-\`\`\`
-
 Ut eu tristique augue, id ultrices enim. Proin pharetra orci eu dui rutrum dapibus sed ac lorem. Ut interdum, arcu sit amet egestas dignissim, metus felis ultricies urna, eget pulvinar augue nulla non nisi. Pellentesque ultricies viverra pulvinar.
 
 Fusce at laoreet est. Cras dapibus sem mi, quis finibus mauris pellentesque non. Quisque pharetra felis nec nunc efficitur venenatis.
