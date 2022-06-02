@@ -1,5 +1,5 @@
 ---
-layout: "../../../layouts/SinglePost.astro"
+layout: "../../layouts/SinglePost.astro"
 title: Second post title
 abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod,
   nisl eget consectetur congue, nisl nunc aliquet nunc, euismod aliquam nisl nunc
@@ -13,14 +13,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique dolor sit
 
 Maecenas sit amet maximus sapien. Fusce vitae pellentesque tortor. Nulla mi odio, sollicitudin eget nibh nec, hendrerit mollis diam. Pellentesque efficitur enim ut tristique convallis.
 
-> Duis in odio volutpat mauris luctus lobortis. Maecenas porta, nisi at consequat porta, sapien leo molestie sapien, a luctus tellus mauris ac metus.
-
-    // Convert date to readble format
-    const readableDate = (date) => {
-      const options = { year: "numeric", month: "long", day: "numeric" };
-      return new Date(date).toLocaleDateString(undefined, options);
-    };
-    
+> Duis in odio volutpat mauris luctus lobortis. Maecenas porta, nisi at consequat porta, sapien leo molestie sapien, a luctus tellus mauris ac metus.    
 
 ## Etiam tincidunt venenatis erat
 

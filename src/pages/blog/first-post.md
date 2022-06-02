@@ -1,5 +1,5 @@
 ---
-layout: "../../../layouts/SinglePost.astro"
+layout: "../../layouts/SinglePost.astro"
 title: Hello, World
 abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod,
   nisl eget consectetur congue, nisl nunc aliquet nunc, euismod aliquam nisl nunc
@@ -21,7 +21,7 @@ Laboriosam error ut. Dolores ut sint quod hic magni. Ipsum soluta occaecati sequ
 
 ## Id aliquam error
 
-![Person typing on a computer](public/uploads/pexels-christina-morillo-1181677.jpeg)
+![Person typing on a computer](/public/uploads/pexels-christina-morillo-1181677.jpeg)
 
 Id aliquam error. Aut sapiente non dolorem autem autem. Id est nostrum quas sit officiis aut aut ut. Vel explicabo aut.
 
