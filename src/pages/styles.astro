@@ -4,15 +4,15 @@ import Base from "../layouts/Base.astro";
 ---
 
 <Base>
-    <div class="container py-32 mx-auto grid grid-cols-3 gap-4">
-        <div class="text-white bg-gray-900 palette">Gray 900</div>
-        <div class="text-white bg-gray-800 palette">Gray 800</div>
-        <div class="text-white bg-gray-700 palette">Gray 700</div>
-    </div>
+  <div class="container grid grid-cols-3 gap-4 py-32 mx-auto">
+    <div class="text-white bg-gray-900 palette">Gray 900</div>
+    <div class="text-white bg-gray-800 palette">Gray 800</div>
+    <div class="text-white bg-gray-700 palette">Gray 700</div>
+  </div>
 </Base>
 
 <style>
-    .palette {
-        @apply h-36 w-96 font-bold text-[2rem] px-4;
-    }
+  .palette {
+    @apply h-36 w-96 font-bold text-[2rem] px-4;
+  }
 </style>
