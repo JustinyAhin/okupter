@@ -23,7 +23,7 @@ Vel neque ut dolor voluptatum voluptatem quos est id quos. Impedit non quia nemo
 
 ## Id aliquam error
 
-![](public/uploads/pexels-christina-morillo-1181677.jpeg)
+![Person typing on a computer](public/uploads/pexels-christina-morillo-1181677.jpeg)
 
 Id aliquam error. Aut sapiente non dolorem autem autem. Id est nostrum quas sit officiis aut aut ut. Vel explicabo aut.
 
