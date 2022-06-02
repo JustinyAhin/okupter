@@ -31,11 +31,14 @@ allPosts = allPosts.map((post) => {
 ---
 
 <Fragment>
-    {
-        allPosts.map((post) => {
-            return (
-                <HomePostPreview slug={post.slug} title={post.title} description={post.seoMetatags.description} date={post._firstPublishedAt}/>
-            )
-        })
-    }
+  {allPosts.map((post) => {
+    return (
+      <HomePostPreview
+        slug={post.slug}
+        title={post.title}
+        description={post.seoMetatags.description}
+        date={post._firstPublishedAt}
+      />
+    )
+  })}
 </Fragment>

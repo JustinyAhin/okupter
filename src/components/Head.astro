@@ -18,16 +18,14 @@ const siteMeta = {
 const { title, description, isHomePage, ogImage } = Astro.props;
 ---
 
-<!-- Global Metadata -->
-<meta charset="utf-8" />
+<!-- Global Metadata --><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width" />
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
 <!-- Primary Meta Tags -->
-<title
-  >{title || siteMeta.name} - {(isHomePage && siteMeta.slogan) ||
-    siteMeta.name}</title
->
+<title>
+  {title || siteMeta.name} - {(isHomePage && siteMeta.slogan) || siteMeta.name}
+</title>
 <meta name="title" content={title || siteMeta.name} />
 <meta name="description" content={description || siteMeta.slogan} />
 
@@ -51,8 +49,10 @@ const { title, description, isHomePage, ogImage } = Astro.props;
 <meta property="twitter:description" content={description || siteMeta.slogan} />
 <meta property="twitter:image" content={ogImage || siteMeta.ogImage} />
 
-
 <!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Libre+Baskerville:ital@0;1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Libre+Baskerville:ital@0;1&display=swap"
+  rel="stylesheet"
+/>
