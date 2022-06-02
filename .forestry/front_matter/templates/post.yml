@@ -7,7 +7,7 @@ fields:
   name: layout
   label: Layout
   hidden: true
-  default: "../../../layouts/SinglePost.astro"
+  default: "../../layouts/SinglePost.astro"
 - type: text
   name: title
   label: Title
