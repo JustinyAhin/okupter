@@ -4,31 +4,31 @@
 
 @layer base {
   h1 {
-    @apply text-[2rem] sm:text-[3.4rem] mb-6 leading-[1.25em];
+    @apply text-6xl mb-6;
   }
 
   h2 {
-    @apply text-[2.75rem] mb-5 leading-[1.25em];
+    @apply text-5xl mb-5;
   }
 
   h3 {
-    @apply text-[2.25rem] mb-4 leading-[1.4em];
+    @apply text-4xl mb-4;
   }
 
   h4 {
-    @apply text-[1.375rem] mb-3 leading-[1.4em];
+    @apply text-3xl mb-3;
   }
 
   h5 {
-    @apply text-[0.875rem] mb-3 leading-[1.5em] font-medium uppercase tracking-[1px];
+    @apply text-2xl mb-3 uppercase;
   }
 
   h6 {
-    @apply text-[0.81rem] mb-2 leading-[1.5em] font-medium uppercase;
+    @apply text-xl mb-2 uppercase;
   }
 
   p {
-    @apply text-[1.125rem] mb-4 leading-[1.5em];
+    @apply text-lg mb-4;
   }
 
   a {
@@ -44,11 +44,11 @@
 
   /* Paragraphs */
   p.extra-large {
-    @apply sm:text-[1.5rem] mb-6;
+    @apply text-2xl;
   }
 
   p.small {
-    @apply text-[0.875rem] mb-4 leading-[1.4em] text-gray-700;
+    @apply text-base text-gray-700;
   }
 
   /* Code */
