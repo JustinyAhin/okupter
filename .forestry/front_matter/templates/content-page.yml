@@ -16,3 +16,5 @@ fields:
   label: Publication date
   config:
     export_format: MM-DD-YYYY
+pages:
+- src/pages/about.md

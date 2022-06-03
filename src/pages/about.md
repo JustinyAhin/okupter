@@ -2,8 +2,8 @@
 layout: "../layouts/SinglePage.astro"
 title: About Okupter
 datePublished: 2022-06-01
----
 
+---
 I definitely think that the more we immerse ourselves in a technology, the more a bubble forms around us, our ways of thinking, etc.  Over the past four years, my bubble has been built around WordPress, its community and its ecosystem.
 
 I like to define myself as a person who is eager to learn, and very curious. Over the years, I've explored other technologies, from frontend frameworks to static site generation tools and headless CMSs to accessibility and web performance.
