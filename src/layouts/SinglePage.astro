@@ -1,0 +1,16 @@
+---
+// Component Imports
+import Base from "../layouts/Base.astro";
+
+// Data
+const { content } = Astro.props;
+---
+
+<Base title={content.title}>
+    <article class="xl-container py-24">
+        <div class="sm:w-8/12">
+            <h1>{content.title}</h1>
+            <slot />
+        </div>
+    </article>
+</Base>
