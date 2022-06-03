@@ -1,12 +1,13 @@
 ---
 layout: "../../layouts/SinglePost.astro"
 title: Hello, World
-abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod,
+abstract:
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod,
   nisl eget consectetur congue, nisl nunc aliquet nunc, euismod aliquam nisl nunc
   euismod nisl.
 datePublished: 2022-06-01T05:00:00.000+00:00
-
 ---
+
 ## This is a blog post.
 
 This is your first markdown page. It probably isn't styled much, although

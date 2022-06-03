@@ -4,24 +4,19 @@ import { readableDate } from "../assets/scripts/utils";
 
 // Component props
 export interface Props {
-    title: string;
-    datePublished: Date;
-    abstract?: string;
-    slug: string;
+  title: string;
+  datePublished: Date;
+  abstract?: string;
+  slug: string;
 }
 
-const {
-    title,
-    datePublished,
-    abstract,
-    slug,
-} = Astro.props as Props;
+const { title, datePublished, abstract, slug } = Astro.props as Props;
 ---
 
-<article class="px-8 py-12 bg-white shadow-sm rounded-sm cursor-pointer">
-    <p>{readableDate(datePublished)}</p>
-    <h3>
-        <a href={`/blog/${slug}`} class="no-underline">{title}</a>
-    </h3>
-    <p class="small">{abstract}</p>
+<article class="py-12 px-8 bg-white rounded-sm shadow-sm cursor-pointer">
+  <p>{readableDate(datePublished)}</p>
+  <h3>
+    <a href={`/blog/${slug}`} class="no-underline">{title}</a>
+  </h3>
+  <p class="small">{abstract}</p>
 </article>

@@ -10,11 +10,11 @@ const { content } = Astro.props;
 ---
 
 <Base title={content.title}>
-    <article class="xl-container py-24">
-        <div class="sm:w-8/12">
-            <p>{readableDate(content.datePublished)}</p>
-            <h1>{content.title}</h1>
-            <slot />
-        </div>
-    </article>
+  <article class="py-24 xl-container">
+    <div class="sm:w-8/12">
+      <p>{readableDate(content.datePublished)}</p>
+      <h1>{content.title}</h1>
+      <slot></slot>
+    </div>
+  </article>
 </Base>
