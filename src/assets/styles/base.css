@@ -4,27 +4,27 @@
 
 @layer base {
   h1 {
-    @apply text-6xl mb-6;
+    @apply text-4xl sm:text-6xl mb-6;
   }
 
   h2 {
-    @apply text-5xl mb-5;
+    @apply text-3xl sm:text-5xl mb-5;
   }
 
   h3 {
-    @apply text-4xl mb-4;
+    @apply text-2xl sm:text-4xl mb-4;
   }
 
   h4 {
-    @apply text-3xl mb-3;
+    @apply text-xl sm:text-3xl mb-3;
   }
 
   h5 {
-    @apply text-2xl mb-3 uppercase;
+    @apply text-lg sm:text-2xl mb-3;
   }
 
   h6 {
-    @apply text-xl mb-2 uppercase;
+    @apply text-base sm:text-xl mb-2;
   }
 
   p {
