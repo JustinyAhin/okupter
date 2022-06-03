@@ -4,10 +4,14 @@ hide_body: false
 fields:
 - type: text
   name: layout
-  label: layout
+  label: Layout
+  hidden: true
+  default: "../layouts/SinglePage.astro"
 - type: text
   name: title
-  label: title
+  label: Title
 - type: datetime
   name: datePublished
-  label: datePublished
+  label: Publication date
+  config:
+    export_format: MM-DD-YYYY
