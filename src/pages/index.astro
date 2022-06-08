@@ -9,47 +9,43 @@ const posts = await Astro.glob("./blog/*.md");
 ---
 
 <Base isHomePage>
-  <main class="md-container">
-    <section
-      class="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0 bg-white p-6 rounded-md shadow-md"
-    >
-      <Image
-        src="./src/assets/images/justin.webp"
-        alt="Justin's Profile"
-        width={75}
-        height={75}
-        notLazy
-        figureClasses="basis-4/12"
-      />
-      <div class="space-y-4">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quod
-          aliquam earum, nulla quidem exercitationem commodi consectetur itaque
-          similique, eos fugiat rem sint architecto repellat molestiae nostrum
-          voluptas obcaecati iste? Aut ipsa ducimus vitae dolorum?
-        </p>
+<main class="md-container">
+  <section class="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0 bg-white p-6 rounded-md shadow-md">
+    <Image src="./src/assets/images/justin.webp" alt="Justin's Profile" width={75} height={75} notLazy
+      figureClasses="basis-4/12" />
 
-        <div class="flex space-x-2">
-          <a href="https://github.com/JustinyAhin" target="_blank" class="extra-small">GitHub</a>
-          <a href="https://twitter.com/iamsegbedji" target="_blank" class="extra-small">Twitter</a>
-          <a href="https://www.linkedin.com/in/justinahinon" target="_blank" class="extra-small">LinkedIn</a>
-        </div>
-      </div>
-    </section>
+    <div class="space-y-4">
+      <p>
+        My name is <span class="font-semibold">Justin Ahinon</span>. I'm an Open Source enthusiast with a passion
+        for<span class="font-medium text-indigo-900">well crafted softwares</span>, <span
+          class="font-medium text-indigo-900">web accessibility</span> and <span
+          class="font-medium text-indigo-900">frontend performance</span>.
+      </p>
+      <p>
+        I share my thoughts about about  web development best practices, software quality, web performance, accessibility and more. Learn more about the blog, and the meaning of the name <span class="font-bold">Okupter</span> <a href="/">here</a>.
+      </p>
 
-    <section class="py-16 space-y-8">
-      <h2 class="font-baskerville">Recent posts</h2>
-      <div class="space-y-8">
-        {
-          posts.map(post => (
-          <PostCard title={post.frontmatter.title} datePublished={post.frontmatter.datePublished}
-            abstract={post.frontmatter.abstract} slug={post.url.replace(/^\/blog\//, '' )} />
-          ))
-        }
+      <div class="flex space-x-2">
+        <a href="https://github.com/JustinyAhin" target="_blank" class="extra-small">GitHub</a>
+        <a href="https://twitter.com/iamsegbedji" target="_blank" class="extra-small">Twitter</a>
+        <a href="https://www.linkedin.com/in/justinahinon" target="_blank" class="extra-small">LinkedIn</a>
       </div>
-      <div>
-        <a href="/blog" class="font-bold text-gray-900">Blog archives</a>
-      </div>
-    </section>
-  </main>
+    </div>
+  </section>
+
+  <section class="py-16 space-y-8">
+    <h2 class="font-baskerville">Recent posts</h2>
+    <div class="space-y-8">
+      {
+      posts.map(post => (
+      <PostCard title={post.frontmatter.title} datePublished={post.frontmatter.datePublished}
+        abstract={post.frontmatter.abstract} slug={post.url.replace(/^\/blog\//, '' )} />
+      ))
+      }
+    </div>
+    <div>
+      <a href="/blog" class="font-bold text-gray-900">Blog archives</a>
+    </div>
+  </section>
+</main>
 </Base>
