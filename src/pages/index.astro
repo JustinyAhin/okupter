@@ -1,23 +1,28 @@
 ---
 // Component Imports
 import Base from "../layouts/Base.astro";
+import Image from "../components/atomics/Image.astro";
 ---
 
 <Base isHomePage>
-  <div class="py-24 xl-container">
-    <h1 class="sm:w-11/12">
-      Hello 👋🏽. <span class="font-bold">I'm Justin Ahinon</span>. I'm an Open
-      Source enthusiast with a passion for well crafted softwares, <span
-        class="font-serif italic"
-        >web accessibility
-      </span> and <span class="font-serif italic">frontend performance</span>.
-    </h1>
-    <p class="sm:w-8/12 extra-large">
-      I created this blog to share my thoughts about topics that I'm passionate
-      about. This goes from web development best practices, to software quality,
-      performance, and much more. Learn more about the blog, and the meaning of
-      the name <span class="font-bold">Okupter</span>
-      <a href="/">here</a>.
-    </p>
+<div class="md-container">
+  <div class="flex space-x-8 bg-white p-8 rounded-md shadow-md">
+    <Image src="./src/assets/images/justin.webp" alt="Justin's Profile" notLazy />
+    <div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quod aliquam earum, nulla quidem exercitationem
+        commodi consectetur itaque similique, eos fugiat rem sint architecto repellat molestiae nostrum voluptas
+        obcaecati iste? Aut ipsa ducimus vitae dolorum?</p>
+
+      <p>Also find me on:</p>
+      <ul>
+        <li>
+          <a href="/">GitHub</a>
+        </li>
+        <li>
+          <a href="/">Twitters</a>
+        </li>
+      </ul>
+    </div>
   </div>
+</div>
 </Base>
