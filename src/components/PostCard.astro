@@ -13,9 +13,9 @@ export interface Props {
 const { title, datePublished, abstract, slug } = Astro.props as Props;
 ---
 
-<article class="py-12 px-8 bg-white rounded-sm shadow-sm cursor-pointer">
-  <p>{readableDate(datePublished)}</p>
-  <h3>
+<article class="pb-4 space-y-2 border-b-[1px] border-gray-500">
+  <p class="extra-small">{readableDate(datePublished)}</p>
+  <h3 class="font-baskerville font-semibold text-indigo-900 text-2xl">
     <a href={`/blog/${slug}`} class="no-underline">{title}</a>
   </h3>
   <p class="small">{abstract}</p>

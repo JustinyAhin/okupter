@@ -10,11 +10,9 @@ const { content } = Astro.props;
 ---
 
 <Base title={content.title}>
-  <article class="py-24 xl-container">
-    <div class="sm:w-8/12">
+  <article class="py-16 md-container space-y-4">
       <p>{readableDate(content.datePublished)}</p>
       <h1>{content.title}</h1>
       <slot></slot>
-    </div>
   </article>
 </Base>

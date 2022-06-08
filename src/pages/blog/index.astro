@@ -8,20 +8,12 @@ const posts = await Astro.glob('./*.md');
 ---
 
 <Base title="Blog">
-  <div class="py-24 xl-container">
-    <h1>📚 Blog</h1>
-
-    <div class="grid grid-cols-1 gap-6 sm:grid-cols-3">
-      {
-        posts.map(post => (
-          <PostCard
-            title={post.frontmatter.title}
-            datePublished={post.frontmatter.datePublished}
-            abstract={post.frontmatter.abstract}
-            slug={post.url.replace(/^\/blog\//, '')}
-          />
-        ))
-      }
-    </div>
-  </div>
+  <section class="py-16 space-y-8 md-container">
+    {
+      posts.map(post => (
+      <PostCard title={post.frontmatter.title} datePublished={post.frontmatter.datePublished}
+        abstract={post.frontmatter.abstract} slug={post.url.replace(/^\/blog\//, '' )} />
+      ))
+    }
+  </section>
 </Base>

@@ -2,34 +2,45 @@
 // Component Imports
 import Base from "../layouts/Base.astro";
 import Image from "../components/atomics/Image.astro";
+import PostCard from "../components/PostCard.astro";
+
+// Data
+const posts = await Astro.glob('./blog/*.md');
 ---
 
 <Base isHomePage>
-  <div class="md-container">
-    <div class="flex space-x-8 bg-white p-8 rounded-md shadow-md">
-      <Image
-        src="./src/assets/images/justin.webp"
-        alt="Justin's Profile"
-        notLazy
-      />
-      <div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quod
-          aliquam earum, nulla quidem exercitationem commodi consectetur itaque
-          similique, eos fugiat rem sint architecto repellat molestiae nostrum
-          voluptas obcaecati iste? Aut ipsa ducimus vitae dolorum?
-        </p>
+<main class="md-container">
+  <section class="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0 bg-white p-6 rounded-md shadow-md">
+    <Image src="./src/assets/images/justin.webp" alt="Justin's Profile" width={75} height={75} notLazy figureClasses="basis-4/12" />
+    <div class="space-y-4">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quod
+        aliquam earum, nulla quidem exercitationem commodi consectetur itaque
+        similique, eos fugiat rem sint architecto repellat molestiae nostrum
+        voluptas obcaecati iste? Aut ipsa ducimus vitae dolorum?
+      </p>
 
-        <p>Also find me on:</p>
-        <ul>
-          <li>
-            <a href="/">GitHub</a>
-          </li>
-          <li>
-            <a href="/">Twitters</a>
-          </li>
-        </ul>
+      <div>
+        <a href="/">GitHub</a>
+        <a href="/">Twitter</a>
+        <a href="/">LinkedIn</a>
       </div>
     </div>
-  </div>
+  </section>
+
+  <section class="py-16 space-y-8">
+    <h2 class="font-baskerville">Recent posts</h2>
+    <div class="space-y-8">
+      {
+        posts.map(post => (
+        <PostCard title={post.frontmatter.title} datePublished={post.frontmatter.datePublished}
+          abstract={post.frontmatter.abstract} slug={post.url.replace(/^\/blog\//, '' )} />
+        ))
+      }
+    </div>
+    <div>
+      <a href="/blog">Blog archives</a>
+    </div>
+  </section>
+</main>
 </Base>

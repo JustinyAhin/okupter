@@ -4,31 +4,31 @@
 
 @layer base {
   h1 {
-    @apply text-4xl sm:text-6xl mb-6;
+    @apply text-4xl sm:text-6xl;
   }
 
   h2 {
-    @apply text-3xl sm:text-5xl mb-5;
+    @apply text-3xl sm:text-4xl;
   }
 
   h3 {
-    @apply text-2xl sm:text-4xl mb-4;
+    @apply text-2xl sm:text-3xl;
   }
 
   h4 {
-    @apply text-xl sm:text-3xl mb-3;
+    @apply text-xl sm:text-2xl;
   }
 
   h5 {
-    @apply text-lg sm:text-2xl mb-3;
+    @apply text-lg sm:text-xl;
   }
 
   h6 {
-    @apply text-base sm:text-xl mb-2;
+    @apply text-base sm:text-lg;
   }
 
   p {
-    @apply text-lg mb-4;
+    @apply text-lg;
   }
 
   a {
@@ -42,18 +42,22 @@
     @apply font-baskerville;
   }
 
-  /* Paragraphs */
-  p.extra-large {
+  /* Content */
+  .extra-large {
     @apply text-2xl;
   }
 
-  p.small {
+  .small {
     @apply text-base text-gray-700;
+  }
+
+  .extra-small {
+    @apply text-xs text-gray-700;
   }
 
   /* Code */
   pre {
-    @apply p-8 mb-8;
+    @apply p-8;
   }
 
   /* Containers */
