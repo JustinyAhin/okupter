@@ -32,7 +32,7 @@
   }
 
   a {
-    @apply underline hover:text-indigo-900;
+    @apply underline text-indigo-900 hover:text-gray-900;
   }
 }
 
