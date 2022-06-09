@@ -3,18 +3,16 @@ label: Content page
 hide_body: false
 display_field: title
 fields:
-  - type: text
-    name: layout
-    label: Layout
-    hidden: true
-    default: "../layouts/SinglePage.astro"
-  - type: text
-    name: title
-    label: Title
-  - type: datetime
-    name: datePublished
-    label: Publication date
-    config:
-      export_format: MM-DD-YYYY
-pages:
-  - src/pages/about.md
+- type: text
+  name: layout
+  label: Layout
+  hidden: true
+  default: "../layouts/SinglePage.astro"
+- type: text
+  name: title
+  label: Title
+- type: datetime
+  name: datePublished
+  label: Publication date
+  config:
+    export_format: MM-DD-YYYY

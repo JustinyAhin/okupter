@@ -1,24 +1,24 @@
 ---
 new_page_extension: md
 auto_deploy: false
-admin_path: ""
-webhook_url:
+admin_path: ''
+webhook_url: 
 sections:
-  - type: directory
-    path: src/pages
-    label: Content pages
-    create: documents
-    match: "*.md"
-  - type: directory
-    path: src/pages/blog
-    label: Posts
-    create: documents
-    match: "*.md"
-    new_doc_ext: app
+- type: directory
+  path: src/pages
+  label: Content pages
+  create: documents
+  match: "*.md"
+- type: directory
+  path: src/pages/blog
+  label: Posts
+  create: documents
+  match: "*.md"
+  new_doc_ext: app
 upload_dir: public/uploads
 public_path: "/uploads"
-front_matter_path: ""
-use_front_matter_path:
+front_matter_path: ''
+use_front_matter_path: 
 file_template: ":filename:"
 build:
   preview_output_directory: "./dist"

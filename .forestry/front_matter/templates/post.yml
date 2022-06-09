@@ -3,23 +3,25 @@ label: Post
 hide_body: false
 display_field: title
 fields:
-  - type: text
-    name: layout
-    label: Layout
-    hidden: true
-    default: "../../layouts/SinglePost.astro"
-  - type: text
-    name: title
-    label: Title
-    config:
-      required: true
-  - type: textarea
-    name: abstract
-    label: Abstract
-    config:
-      wysiwyg: false
-  - type: datetime
-    name: datePublished
-    label: Publication date
-    config:
-      required: false
+- type: text
+  name: layout
+  label: Layout
+  hidden: true
+  default: "../../layouts/SinglePost.astro"
+- type: text
+  name: title
+  label: Title
+  config:
+    required: true
+- type: textarea
+  name: abstract
+  label: Abstract
+  config:
+    wysiwyg: false
+- type: datetime
+  name: datePublished
+  label: Publication date
+  config:
+    required: false
+pages:
+- src/pages/blog/the-case-about-astro.app
