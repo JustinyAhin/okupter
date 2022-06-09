@@ -5,7 +5,9 @@ import Image from "../components/atomics/Image.astro";
 import PostCard from "../components/PostCard.astro";
 
 // Data
-const posts = await Astro.glob("./blog/*.md");
+const posts = (await Astro.glob("./blog/*.md")).filter(post => {
+  return post.frontmatter.status === "Public";
+});
 ---
 
 <Base isHomePage>

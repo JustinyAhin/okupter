@@ -4,7 +4,9 @@ import Base from "../../layouts/Base.astro";
 import PostCard from "../../components/PostCard.astro";
 
 // Data
-const posts = await Astro.glob('./*.md');
+const posts = (await Astro.glob("./*.md")).filter(post => {
+  return post.frontmatter.status === "Public";
+});
 ---
 
 <Base title="Blog">
