@@ -5,6 +5,7 @@ abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod
   nisl eget consectetur congue, nisl nunc aliquet nunc, euismod aliquam nisl nunc
   euismod nisl.
 datePublished: 2022-05-31T22:00:00.000+00:00
+status: Public
 
 ---
 ## This is the first post
