@@ -40,4 +40,4 @@ fields:
 pages:
 - src/pages/blog/first-post.md
 - src/pages/blog/second-post-title.md
-- src/pages/blog/the-case-about-astro.app
+- src/pages/blog/the-case-about-astro.md

@@ -14,7 +14,7 @@ sections:
   label: Posts
   create: documents
   match: "*.md"
-  new_doc_ext: ".md"
+  new_doc_ext: md
   templates:
   - post
 upload_dir: public/uploads
