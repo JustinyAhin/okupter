@@ -8,6 +8,20 @@ fields:
   label: Layout
   hidden: true
   default: "../../layouts/SinglePost.astro"
+- name: status
+  type: select
+  default: Draft
+  config:
+    required: false
+    options:
+    - Draft
+    - Public
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Status
 - type: text
   name: title
   label: Title
