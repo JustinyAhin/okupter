@@ -2,8 +2,8 @@ module.exports = {
   content: ["./src/**/*.{astro,html}"],
   theme: {
     fontFamily: {
-      inter: "Inter, sans-serif",
-      baskerville: "Baskerville, serif",
+      helvetica: "Helvetica, sans-serif",
+      georgia: "Georgia, serif",
     },
     colors: {
       indigo: {

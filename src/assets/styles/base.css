@@ -37,11 +37,6 @@
 }
 
 @layer components {
-  /* Fonts */
-  .font-serif {
-    @apply font-baskerville;
-  }
-
   /* Content */
   .extra-large {
     @apply text-2xl;
