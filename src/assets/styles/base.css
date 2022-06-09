@@ -4,15 +4,15 @@
 
 @layer base {
   h1 {
-    @apply text-4xl sm:text-6xl;
+    @apply text-5xl sm:text-6xl font-georgia;
   }
 
   h2 {
-    @apply text-3xl sm:text-4xl;
+    @apply text-3xl sm:text-4xl font-georgia;
   }
 
   h3 {
-    @apply text-2xl sm:text-3xl;
+    @apply text-2xl sm:text-3xl font-georgia;
   }
 
   h4 {

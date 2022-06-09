@@ -15,7 +15,7 @@ const { title, datePublished, abstract, slug } = Astro.props as Props;
 
 <article class="pb-4 space-y-2 border-b-[1px] border-gray-500">
   <p class="extra-small">{readableDate(datePublished)}</p>
-  <h3 class="font-georgia font-semibold text-2xl">
+  <h3 class="font-medium text-2xl">
     <a href={`/blog/${slug}`} class="no-underline">{title}</a>
   </h3>
   <p class="small">{abstract}</p>
