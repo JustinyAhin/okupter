@@ -24,4 +24,5 @@ fields:
   config:
     required: false
 pages:
+- src/pages/blog/second-post-title.md
 - src/pages/blog/the-case-about-astro.app
