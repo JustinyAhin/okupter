@@ -10,12 +10,20 @@ const posts = (await Astro.glob("./*.md")).filter(post => {
 ---
 
 <Base title="Blog">
-  <section class="py-16 space-y-8 md-container">
+  <section class="py-16 space-y-8">
     {
-      posts.map(post => (
-      <PostCard title={post.frontmatter.title} datePublished={post.frontmatter.datePublished}
-        abstract={post.frontmatter.abstract} slug={post.url.replace(/^\/blog\//, '' )} />
-      ))
+      posts.length > 0 ? (
+      <>
+        {
+          posts.map(post => (
+          <PostCard title={post.frontmatter.title} datePublished={post.frontmatter.datePublished}
+            abstract={post.frontmatter.abstract} slug={post.url.replace(/^\/blog\//, '' )} />
+          ))
+        }
+      </>
+      ) : (
+        <h2>Looks like there is no post published on the blog yet. Come back in a few 😉.</h2>
+      )
     }
   </section>
 </Base>

@@ -5,7 +5,7 @@ import Head from "../components/Head.astro";
 import Footer from "../components/Footer.astro";
 
 // Data
-const { title, description, isHomePage, ogImage } = Astro.props;
+const { title, description, isHomePage, ogImage, baseClasses } = Astro.props;
 ---
 
 <html lang="en">
@@ -15,7 +15,7 @@ const { title, description, isHomePage, ogImage } = Astro.props;
 
   <body class="text-gray-800 bg-orange-10 font-helvetica selection:bg-indigo-50">
     <Navigation />
-    <main>
+    <main class="md-container min-h-[60vh]">
       <slot></slot>
     </main>
     <Footer />
