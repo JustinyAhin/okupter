@@ -4,26 +4,29 @@ import Base from "../../layouts/Base.astro";
 import PostCard from "../../components/PostCard.astro";
 
 // Data
-const posts = (await Astro.glob("./*.md")).filter(post => {
+const posts = (await Astro.glob("./*.md")).filter((post) => {
   return post.frontmatter.status === "Public";
 });
 ---
 
 <Base title="Blog">
   <section class="py-16 space-y-8">
-    {
-      posts.length > 0 ? (
+    {posts.length > 0 ? (
       <>
-        {
-          posts.map(post => (
-          <PostCard title={post.frontmatter.title} datePublished={post.frontmatter.datePublished}
-            abstract={post.frontmatter.abstract} slug={post.url.replace(/^\/blog\//, '' )} />
-          ))
-        }
+        {posts.map((post) => (
+          <PostCard
+            title={post.frontmatter.title}
+            datePublished={post.frontmatter.datePublished}
+            abstract={post.frontmatter.abstract}
+            slug={post.url.replace(/^\/blog\//, "")}
+          />
+        ))}
       </>
-      ) : (
-        <h2>Looks like there is no post published on the blog yet. Come back in a few 😉.</h2>
-      )
-    }
+    ) : (
+      <h2>
+        Looks like there is no post published on the blog yet. Come back in a
+        few 😉.
+      </h2>
+    )}
   </section>
 </Base>

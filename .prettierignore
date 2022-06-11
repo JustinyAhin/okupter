@@ -1,0 +1,9 @@
+# Configuration files
+.forestry
+.vscode
+
+# Artifacts
+dist
+
+# Markdown files
+*.md
