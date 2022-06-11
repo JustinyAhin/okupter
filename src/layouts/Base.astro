@@ -5,7 +5,14 @@ import Head from "../components/Head.astro";
 import Footer from "../components/Footer.astro";
 
 // Data
-const { title, description, isHomePage, ogImage, baseClasses } = Astro.props;
+export interface Props {
+  title: string;
+  description?: string;
+  isHomePage?: boolean;
+  ogImage?: string;
+}
+
+const { title, description, isHomePage, ogImage } = Astro.props as Props;
 ---
 
 <html lang="en">
