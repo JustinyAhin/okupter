@@ -1,15 +1,9 @@
 ---
+// Data
+import { site } from "../assets/scripts/site";
+
 // Styles import
 import "../assets/styles/base.css";
-
-// Data
-const siteMeta = {
-  name: "Okupter",
-  slogan: "On web, performance and accessibility.",
-  publicUrl: "https://www.okupter.com/",
-  ogImage:
-    "https://res.cloudinary.com/segbedji/image/upload/v1654865979/okupter/og-image-okupter_v88rvu.png",
-};
 
 const { title, description, isHomePage, ogImage } = Astro.props;
 ---
@@ -21,10 +15,10 @@ const { title, description, isHomePage, ogImage } = Astro.props;
 
 <!-- secondary Meta Tags -->
 <title>
-  {title || siteMeta.name} - {(isHomePage && siteMeta.slogan) || siteMeta.name}
+  {title} - {(isHomePage && site.slogan) || site.name}
 </title>
-<meta name="title" content={title || siteMeta.name} />
-<meta name="description" content={description || siteMeta.slogan} />
+<meta name="title" content={title || site.name} />
+<meta name="description" content={description || site.slogan} />
 
 <!-- Sitemap -->
 <link rel="sitemap" href="/sitemap.xml" />
@@ -35,13 +29,13 @@ const { title, description, isHomePage, ogImage } = Astro.props;
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content={Astro.canonicalURL} />
-<meta property="og:title" content={title || siteMeta.name} />
-<meta property="og:description" content={description || siteMeta.slogan} />
-<meta property="og:image" content={ogImage || siteMeta.ogImage} />
+<meta property="og:title" content={title || site.name} />
+<meta property="og:description" content={description || site.slogan} />
+<meta property="og:image" content={ogImage || site.ogImage} />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={Astro.canonicalURL} />
-<meta property="twitter:title" content={title || siteMeta.name} />
-<meta property="twitter:description" content={description || siteMeta.slogan} />
-<meta property="twitter:image" content={ogImage || siteMeta.ogImage} />
+<meta property="twitter:title" content={title || site.name} />
+<meta property="twitter:description" content={description || site.slogan} />
+<meta property="twitter:image" content={ogImage || site.ogImage} />

@@ -18,7 +18,7 @@ const posts = (await Astro.glob("./*.md")).filter((post) => {
             title={post.frontmatter.title}
             datePublished={post.frontmatter.datePublished}
             abstract={post.frontmatter.abstract}
-            slug={post.url.replace(/^\/blog\//, "")}
+            slug={post?.url?.replace(/^\/blog\//, "")}
           />
         ))}
       </>

@@ -7,7 +7,7 @@ export interface Props {
   title: string;
   datePublished: Date;
   abstract?: string;
-  slug: string;
+  slug: string | undefined;
 }
 
 const { title, datePublished, abstract, slug } = Astro.props as Props;

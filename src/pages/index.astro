@@ -1,16 +1,18 @@
 ---
+// Site data
+import { site } from "../assets/scripts/site";
+
 // Component Imports
 import Base from "../layouts/Base.astro";
 import Image from "../components/atomics/Image.astro";
 import PostCard from "../components/PostCard.astro";
 
-// Data
 const posts = (await Astro.glob("./blog/*.md")).filter((post) => {
   return post.frontmatter.status === "Public";
 });
 ---
 
-<Base isHomePage>
+<Base title={site.name} isHomePage>
   <section
     class="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0 bg-white p-4 sm:p-6 rounded-md shadow-md"
   >
@@ -75,7 +77,7 @@ const posts = (await Astro.glob("./blog/*.md")).filter((post) => {
             title={post.frontmatter.title}
             datePublished={post.frontmatter.datePublished}
             abstract={post.frontmatter.abstract}
-            slug={post.url.replace(/^\/blog\//, "")}
+            slug={post?.url?.replace(/^\/blog\//, "")}
           />
         ))}
       </div>
