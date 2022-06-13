@@ -9,12 +9,25 @@ import Base from "../layouts/Base.astro";
 const { content } = Astro.props;
 ---
 
-<Base title={content.title}>
-  <article class="py-16 space-y-4">
-    <header class="pb-8">
-      <h1 class="font-georgia">{content.title}</h1>
-      <p class="extra-small">{readableDate(content.datePublished)} - {readingTime(content.astro.source)} min read</p>
-    </header>
-    <slot></slot>
-  </article>
-</Base>
+{content.status === "Public" ? (
+  <>
+    <Base title={content.title}>
+      <article class="py-16 space-y-4">
+        <header class="pb-8">
+          <h1 class="font-georgia">{content.title}</h1>
+          <p class="extra-small">
+            {readableDate(content.datePublished)} -{" "}
+            {readingTime(content.astro.html)} min read
+          </p>
+        </header>
+        <slot />
+      </article>
+    </Base>
+  </>
+) : (
+  <>
+    <Base title="Post in draft">
+      <h2>This post is still in draft, please come back later 😉.</h2>
+    </Base>
+  </>
+)}

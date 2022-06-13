@@ -8,10 +8,15 @@ const readingTime = (content: string) => {
   const words = content.split(/\s+/g).length;
   const minutes = Math.ceil(words / wordsPerMinute);
   return minutes;
-}
+};
 
 const readableDate = (date: Date) => {
-  return new Date(date).toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+  return new Date(date).toLocaleDateString(undefined, {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
 };
 
 export { generateSlug, readableDate, readingTime };
