@@ -1,6 +1,6 @@
 ---
 // Utilities
-import { readableDate } from "../assets/scripts/utils";
+import { readableDate, readingTime } from "../assets/scripts/utils";
 
 // Component Imports
 import Base from "../layouts/Base.astro";
@@ -11,9 +11,9 @@ const { content } = Astro.props;
 
 <Base title={content.title}>
   <article class="py-16 space-y-4">
-    <header class="pb-12">
-      <p class="extra-small">{readableDate(content.datePublished)}</p>
+    <header class="pb-8">
       <h1 class="font-georgia">{content.title}</h1>
+      <p class="extra-small">{readableDate(content.datePublished)} - {readingTime(content.astro.source)} min read</p>
     </header>
     <slot></slot>
   </article>
