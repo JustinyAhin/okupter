@@ -13,12 +13,13 @@ const { title, description, isHomePage, ogImage } = Astro.props;
 <meta name="viewport" content="width=device-width" />
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-<!-- secondary Meta Tags -->
+<!-- Secondary Meta Tags -->
 <title>
   {title} - {(isHomePage && site.slogan) || site.name}
 </title>
 <meta name="title" content={title || site.name} />
 <meta name="description" content={description || site.slogan} />
+<meta name="robots" content="index, follow" />
 
 <!-- Sitemap -->
 <link rel="sitemap" href="/sitemap.xml" />
