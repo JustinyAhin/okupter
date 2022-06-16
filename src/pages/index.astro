@@ -70,7 +70,7 @@ const posts = (await Astro.glob("./blog/*.md")).filter((post) => {
 
   {posts.length > 0 && (
     <section class="py-16 space-y-8">
-      <h2 class="font-georgia">Recent posts</h2>
+      <h2>Recent posts</h2>
       <div class="space-y-8">
         {posts.map((post) => (
           <PostCard

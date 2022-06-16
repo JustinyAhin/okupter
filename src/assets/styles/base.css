@@ -34,6 +34,10 @@
   a {
     @apply underline text-indigo-900 hover:text-gray-900;
   }
+
+  blockquote {
+    @apply pl-4 border-l-4 border-indigo-900;
+  }
 }
 
 @layer components {
