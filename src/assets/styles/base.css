@@ -38,6 +38,10 @@
   blockquote {
     @apply pl-4 border-l-4 border-indigo-900;
   }
+
+  ul {
+    @apply list-disc pl-4;
+  }
 }
 
 @layer components {
