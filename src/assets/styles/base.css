@@ -35,10 +35,6 @@
     @apply underline text-indigo-900 hover:text-gray-900;
   }
 
-  blockquote {
-    @apply pl-4 border-l-4 border-indigo-900;
-  }
-
   ul {
     @apply list-disc pl-4;
   }
@@ -61,6 +57,15 @@
   /* Code */
   pre {
     @apply p-8;
+  }
+
+  /* Quote */
+  .quote-wrapper {
+    @apply pl-4 border-l-4 border-indigo-900 space-y-2;
+  }
+
+  .quote-wrapper blockquote {
+    @apply text-lg font-semibold;
   }
 
   /* Containers */

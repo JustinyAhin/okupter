@@ -1,0 +1,22 @@
+---
+export interface Props {
+    quote: string,
+    source?: string,
+    link?: string,
+}
+
+const { quote, source, link } = Astro.props as Props;
+---
+
+
+<figure class="quote-wrapper">
+    <blockquote>
+        {quote}
+    </blockquote>
+
+    {(source || link) && <figcaption>
+        <cite>
+            {source && source}{link && (<span> - </span><a href={link}>{link}</a>)}
+        </cite>
+    </figcaption>}
+</figure>

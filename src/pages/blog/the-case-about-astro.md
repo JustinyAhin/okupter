@@ -1,5 +1,7 @@
 ---
 layout: "../../layouts/SinglePost.astro"
+setup: |
+  import Quote from "../../components/atomics/Quote.astro"
 status: Public
 title: The case about Astro
 abstract: ""
@@ -116,9 +118,7 @@ Personally, I think Astro could take this concept a bit further by creating a na
 
 ## The Astro language
 
-> If you know HTML, you already know enough to write your first Astro component.
->
-> [Astro vs JSX](https://docs.astro.build/en/comparing-astro-vs-other-tools/#astro-vs-jsx)
+<Quote quote="If you know HTML, you already know enough to write your first Astro component." source="https://docs.astro.build/en/comparing-astro-vs-other-tools/#astro-vs-jsx" />
 
 That's what the Astro documentation says about the language. And I think there is no better way to define it. That's also the first thing that struck me when I started using it. There's not really a learning curve.
 
@@ -174,8 +174,6 @@ I think what will make Astro successful is that it doesn't force developers to g
 
 I was recently reading an article by Das Surma about the abstraction of tools/frameworks on the web, and he said this:
 
-> If developers already have a skill but are forced to spend time learning a new way to do the same thing, frustration happens. Doubly so if there is no tangible benefit of doing it “the new way”, apart from maybe idiomaticism or purity.
->
-> https://surma.dev/things/cost-of-convenience
+<Quote quote="If developers already have a skill but are forced to spend time learning a new way to do the same thing, frustration happens. Doubly so if there is no tangible benefit of doing it “the new way”, apart from maybe idiomaticism or purity." source="https://surma.dev/things/cost-of-convenience" link="https://surma.dev/things/cost-of-convenience" />
 
 Do you know that feeling when you start using a tool and you say to yourself: yes, this is the right one? A tool that makes me want to explore it, to discover its potentialities? This is the feeling that Astro gives me now.
