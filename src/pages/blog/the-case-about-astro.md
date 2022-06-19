@@ -9,7 +9,7 @@ abstract: "This article describes what I learned, what I like about Astro, the s
 datePublished: 2022-06-19T22:00:00Z
 ---
 
-For several years, I have more or less stayed in the "WordPress bubble". Indeed, my experience as a developer has been largely focused on creating for the CMS and then contributing/maintaining it full time.
+For several years, I have more or less stayed in the ["WordPress bubble"](https://segbedji.com). My experience as a developer has been largely focused on creating for the CMS and then contributing/maintaining it full time.
 
 But this never really affected my very curious and eager to learn nature. So during these years, I continued to explore other technologies, paradigms, frameworks, etc. in the web development sphere.
 
@@ -19,9 +19,9 @@ I see all these explorations both as a desire to learn, but also as an attempt f
 
 ## And then I discovered Astro
 
-I am very curious about web performance. That's a bit what is behind my interest in static site generators. I tried several of them for personal projects, I even created a [starter template](https://github.com/JustinyAhin/11tybase)) for one of them.
+I am very curious about web performance. That's a bit what is behind my interest in static site generators. I tried several of them for personal projects, I even created a [starter template](https://github.com/JustinyAhin/11tybase) for one of them.
 
-But so far, there has been only one that I liked/interest me enough to finish a project with (this site), and decide to talk about it (this article). That generator is _Astro_.
+But so far, there has been only one that I liked/interest me enough to finish a project with (this site), and decide to talk about it (this article). That generator is [**Astro**](https://astro.build/).
 
 ## Enter Astro
 
@@ -85,15 +85,15 @@ import Counter from "../components/Counter.svelte";
 </style>
 ```
 
-By default, Astro does not send JavaScript to the client, so the component will not be interactive. It's just HTML markup that is returned by Astro: 
+By default, Astro does not send JavaScript to the client, so the component will not be interactive. It's just HTML markup that is returned: 
 
 ```astro
 <button>Clicked 0 times</button>
 ```
 
-This is where partial hydration comes in. By using client directives, we can explicitly tell Astro in which situation we want to make our Svelte component interactive. This can be as soon as the page loads, as soon as the component is visible in the viewport, depending on certain viewport sizes, etc.
+This is where partial hydration comes in. By using [client directives](https://docs.astro.build/en/reference/directives-reference/#client-directives), we can explicitly tell Astro in which situation we want to make our Svelte component interactive. This can be as soon as the page loads, as soon as the component is visible in the viewport, depending on certain viewport sizes, etc.
 
-Adding a directive to our component to hydrate it when it becomes visible in the viewport, then let's inspect the "Network" tab of the browser to see what happens:
+Let's add a directive to our component to hydrate it when it becomes visible in the viewport, then inspect the "Network" tab of the browser to see what happens:
 
 ```astro
 <Counter client:visible />
@@ -101,13 +101,13 @@ Adding a directive to our component to hydrate it when it becomes visible in the
 <p>
   <link href="https://res.cloudinary.com/segbedji/video/upload/v1655659108/okupter/astro-hydrated-component_w07sdh.webm" rel="prefetch"></link>
   <a href="https://res.cloudinary.com/segbedji/video/upload/v1655659108/okupter/astro-hydrated-component_w07sdh.webm" target="_blank">
-    Link to screen record
+    Link to screen record of the Network tab
   </a>
 </p>
 
 Notice that as soon as the component becomes visible, Astro injects the necessary JavaScript to make it fully functional (JavaScript from Svelte).
 
-However, the other pages of the site will remain static, and will never receive this extra JavaScript code, unless the component is added with a client directive. This is what makes partial hydration interesting. You can make parts of your site dynamic without affecting the performance of other pages.
+However, **the other pages of the site will remain static**, and will never receive this extra JavaScript code, unless the component is added with a client directive. This is what makes partial hydration interesting. **You can make parts of your site dynamic without affecting the performance of other pages**.
 
 _It should be noted, however, that to make hydration possible, Astro, adds a script to the page (to determine when the component to be hydrated meets the criteria specified by the directive)_.
 
@@ -121,19 +121,19 @@ The process can be summarized in three steps:
 - Create the component
 - Import it in a `.astro` file.
 
-Astro makes this behavior quite easy by providing integrations for most popular component frameworks like React, Lit, Svelte, Vue, etc.
+Astro makes this behavior quite easy by [providing integrations for most popular component frameworks](https://docs.astro.build/en/core-concepts/framework-components/) like React, Lit, Svelte, Vue, etc.
 
 In my opinion, this is a very interesting feature because it opens the door to more advanced creations than a simple static site with Astro.
 
-Personally, I think Astro could take this concept a bit further by creating a native way to manage the state for Astro components, and why not, extend this to components imported from other frameworks.
+Personally, I think Astro could take this concept a bit further by creating a native way to manage the state for Astro components, and why not, extend this state to components imported from other frameworks.
 
 ## The Astro language
 
-<Quote quote="If you know HTML, you already know enough to write your first Astro component." source="https://docs.astro.build/en/comparing-astro-vs-other-tools/#astro-vs-jsx" />
+<Quote quote="If you know HTML, you already know enough to write your first Astro component." link="https://docs.astro.build/en/comparing-astro-vs-other-tools/#astro-vs-jsx" />
 
 That's what the Astro documentation says about the language. And I think there is no better way to define it. That's also the first thing that struck me when I started using it. There's not really a learning curve.
 
-In fact, you can have a `.html' file, change its extension to `.astro' and you have a totally valid Astro file. The Astro language is HTML with superpowers. It allows you to do most of the things that are possible with tools like JSX (conditional rendering, attribute spreading, etc.), but with a disconcerting ease.
+In fact, **you can have a `.html` file, change its extension to `.astro' and you have a totally valid Astro file**. The Astro language is HTML with superpowers. It allows you to do most of the things that are possible with tools like JSX (conditional rendering, attribute spreading, etc.), but with a disconcerting ease.
 
 In general, a component written in Astro will look like 
 
@@ -141,7 +141,7 @@ In general, a component written in Astro will look like
 
 ## Data fetching
 
-By default, an Astro component allows to use the global JavaScript method `fetch()` in the component's script (which is enclosed by two pairs of dashes and placed at the top of the `.astro` file). So you can easily make API calls in the component, and pass the results to your HTML markup in the same file.
+By default, an Astro component [allows to use the global JavaScript method `fetch()` in the component's script](https://docs.astro.build/en/guides/data-fetching/) (_which is enclosed by two pairs of dashes and placed at the top of the `.astro` file_). So you can easily make API calls in the component, and pass the results to your HTML markup in the same file.
 
 ```astro
 ---
