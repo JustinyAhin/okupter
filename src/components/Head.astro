@@ -2,9 +2,6 @@
 // Data
 import { site } from "../assets/scripts/site";
 
-// Styles import
-import "../assets/styles/base.css";
-
 const { title, description, isHomePage, ogImage } = Astro.props;
 ---
 
@@ -40,6 +37,9 @@ const { title, description, isHomePage, ogImage } = Astro.props;
 <meta property="twitter:title" content={title || site.name} />
 <meta property="twitter:description" content={description || site.slogan} />
 <meta property="twitter:image" content={ogImage || site.ogImage} />
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="/src/assets/styles/base.css">
 
 <!-- Splitbee Analytics -->
 <script data-respect-dnt async src="https://cdn.splitbee.io/sb.js"></script>
