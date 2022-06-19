@@ -3,6 +3,7 @@ layout: "../../layouts/SinglePost.astro"
 ogImage: "https://res.cloudinary.com/segbedji/image/upload/v1655643662/okupter/the-case-about-astro_cjembc.png"
 setup: |
   import Quote from "../../components/atomics/Quote.astro"
+  import Image from "../../components/atomics/Image.astro"
 status: Public
 title: The case about Astro
 abstract: "This article describes what I learned, what I like about Astro, the static site generator,, and what makes it an interesting tool to consider."
@@ -137,7 +138,12 @@ In fact, **you can have a `.html` file, change its extension to `.astro' and you
 
 In general, a component written in Astro will look like 
 
-![The Astro language](/uploads/astro-language.svg)
+<Image
+  src="/uploads/astro-language.svg"
+  alt="The Astro language"
+  width={768}
+  height={748}
+/>
 
 ## Data fetching
 
