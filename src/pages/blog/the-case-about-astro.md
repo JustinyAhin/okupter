@@ -3,7 +3,7 @@ layout: "../../layouts/SinglePost.astro"
 ogImage: "https://res.cloudinary.com/segbedji/image/upload/v1655643662/okupter/the-case-about-astro_cjembc.png"
 setup: |
   import Quote from "../../components/atomics/Quote.astro"
-status: Draft
+status: Public
 title: The case about Astro
 abstract: "This article describes what I learned, what I like about Astro, the static site generator,, and what makes it an interesting tool to consider."
 datePublished: 2022-06-19T22:00:00Z
@@ -98,8 +98,8 @@ Let's add a directive to our component to hydrate it when it becomes visible in 
 ```astro
 <Counter client:visible />
 ```
+
 <p>
-  <link href="https://res.cloudinary.com/segbedji/video/upload/v1655659108/okupter/astro-hydrated-component_w07sdh.webm" rel="prefetch"></link>
   <a href="https://res.cloudinary.com/segbedji/video/upload/v1655659108/okupter/astro-hydrated-component_w07sdh.webm" target="_blank">
     Link to screen record of the Network tab
   </a>
