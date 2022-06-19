@@ -11,7 +11,7 @@ const { content } = Astro.props;
 
 {content.status === "Public" ? (
   <>
-    <Base title={content.title}>
+    <Base title={content.title} description={content.abstract} ogImage={content.ogImage}>
       <article class="py-16 space-y-4">
         <header class="pb-8">
           <h1>{content.title}</h1>

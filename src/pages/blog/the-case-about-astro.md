@@ -1,10 +1,11 @@
 ---
 layout: "../../layouts/SinglePost.astro"
+ogImage: "https://res.cloudinary.com/segbedji/image/upload/v1655643662/okupter/the-case-about-astro_cjembc.png"
 setup: |
   import Quote from "../../components/atomics/Quote.astro"
 status: Public
 title: The case about Astro
-abstract: ""
+abstract: "This article describes what I learned, what I like about Astro, the static site generator,, and what makes it an interesting tool to consider."
 datePublished: 2022-06-19T22:00:00Z
 ---
 
@@ -84,7 +85,11 @@ import Counter from "../components/Counter.svelte";
 </style>
 ```
 
-By default, Astro does not send JavaScript to the client, so the component will not be interactive. It's just HTML markup that is returned by Astro: `<button>Clicked 0 times</button>`.
+By default, Astro does not send JavaScript to the client, so the component will not be interactive. It's just HTML markup that is returned by Astro: 
+
+```astro
+<button>Clicked 0 times</button>
+```
 
 This is where partial hydration comes in. By using client directives, we can explicitly tell Astro in which situation we want to make our Svelte component interactive. This can be as soon as the page loads, as soon as the component is visible in the viewport, depending on certain viewport sizes, etc.
 
@@ -93,6 +98,12 @@ Adding a directive to our component to hydrate it when it becomes visible in the
 ```astro
 <Counter client:visible />
 ```
+<p>
+  <link href="https://res.cloudinary.com/segbedji/video/upload/v1655659108/okupter/astro-hydrated-component_w07sdh.webm" rel="prefetch"></link>
+  <a href="https://res.cloudinary.com/segbedji/video/upload/v1655659108/okupter/astro-hydrated-component_w07sdh.webm" target="_blank">
+    Link to screen record
+  </a>
+</p>
 
 Notice that as soon as the component becomes visible, Astro injects the necessary JavaScript to make it fully functional (JavaScript from Svelte).
 
@@ -124,7 +135,9 @@ That's what the Astro documentation says about the language. And I think there i
 
 In fact, you can have a `.html' file, change its extension to `.astro' and you have a totally valid Astro file. The Astro language is HTML with superpowers. It allows you to do most of the things that are possible with tools like JSX (conditional rendering, attribute spreading, etc.), but with a disconcerting ease.
 
-In general, a component written in Astro will look like this:
+In general, a component written in Astro will look like 
+
+![The Astro language](/uploads/astro-language.svg)
 
 ## Data fetching
 
@@ -174,6 +187,6 @@ I think what will make Astro successful is that it doesn't force developers to g
 
 I was recently reading an article by Das Surma about the abstraction of tools/frameworks on the web, and he said this:
 
-<Quote quote="If developers already have a skill but are forced to spend time learning a new way to do the same thing, frustration happens. Doubly so if there is no tangible benefit of doing it “the new way”, apart from maybe idiomaticism or purity." source="https://surma.dev/things/cost-of-convenience" link="https://surma.dev/things/cost-of-convenience" />
+<Quote quote="If developers already have a skill but are forced to spend time learning a new way to do the same thing, frustration happens. Doubly so if there is no tangible benefit of doing it “the new way”, apart from maybe idiomaticism or purity." link="https://surma.dev/things/cost-of-convenience" />
 
 Do you know that feeling when you start using a tool and you say to yourself: yes, this is the right one? A tool that makes me want to explore it, to discover its potentialities? This is the feeling that Astro gives me now.
