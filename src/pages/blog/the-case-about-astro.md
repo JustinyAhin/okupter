@@ -3,7 +3,7 @@ layout: "../../layouts/SinglePost.astro"
 ogImage: "https://res.cloudinary.com/segbedji/image/upload/v1655643662/okupter/the-case-about-astro_cjembc.png"
 setup: |
   import Quote from "../../components/atomics/Quote.astro"
-status: Public
+status: Draft
 title: The case about Astro
 abstract: "This article describes what I learned, what I like about Astro, the static site generator,, and what makes it an interesting tool to consider."
 datePublished: 2022-06-19T22:00:00Z
