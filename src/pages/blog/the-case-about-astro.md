@@ -6,7 +6,7 @@ setup: |
   import Image from "../../components/atomics/Image.astro"
 status: Public
 title: The case about Astro
-abstract: "This article describes what I learned, what I like about Astro, the static site generator,, and what makes it an interesting tool to consider."
+abstract: "This article describes what I learned, what I like about Astro, the static site generator, and what makes it an interesting tool to consider."
 datePublished: 2022-06-19T22:00:00Z
 ---
 
