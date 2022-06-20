@@ -139,7 +139,7 @@ In fact, **you can have a `.html` file, change its extension to `.astro' and you
 In general, a component written in Astro will look like 
 
 <Image
-  src="/uploads/astro-language.svg"
+  src="/uploads/astro-language.webp"
   alt="The Astro language"
   width={768}
   height={748}
